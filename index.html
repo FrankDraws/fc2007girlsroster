@@ -137,12 +137,6 @@ and also iPads specifically.
                 font-weight: bold
             }
 
-            /* td:nth-of-type(5):before { content: "Wars of Trek?"; }
-	td:nth-of-type(6):before { content: "Secret Alias"; }
-	td:nth-of-type(7):before { content: "Date of Birth"; }
-	td:nth-of-type(8):before { content: "Dream Vacation City"; }
-	td:nth-of-type(9):before { content: "GPA"; }
-	td:nth-of-type(10):before { content: "Arbitrary Data"; } */
             td.staff:nth-of-type(1):before {
                 content: "Coach";
                 font-weight: bold
@@ -175,6 +169,7 @@ and also iPads specifically.
     <div>
         <h1>Four Corners 2007 Girls - Red Team Roster</h1>
     </div>
+    <!-- ROSTER  -->
     <table>
         <thead>
             <tr>
@@ -186,97 +181,81 @@ and also iPads specifically.
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
+                <td></td>
                 <td>Neva Quinones</td>
                 <td>28</td>
                 <td>Frank Quinones &amp; Alisha Fredrickson</td>
             </tr>
             <tr>
-                <td>2</td>
+                <td></td>
                 <td>Layna Tederous</td>
                 <td>#</td>
                 <td>Mr. &amp; Rachel Tederous</td>
             </tr>
             <tr>
-                <td>3</td>
+                <td></td>
                 <td>Emily Hernandez</td>
                 <td>#</td>
                 <td>Mr. &amp; Mrs. Hernandez</td>
             </tr>
             <tr>
-                <td>4</td>
+                <td></td>
+                <td>Jas</td>
+                <td>#</td>
+                <td>Mr. &amp; Mrs.</td>
+            </tr>
+            <tr>
+                <td></td>
                 <td>Kyleigh</td>
                 <td>#</td>
                 <td>Mr. &amp; Mrs.</td>
             </tr>
             <tr>
-                <td>5</td>
+                <td></td>
                 <td>Aiyanna</td>
                 <td>#</td>
                 <td>Mr. &amp; Mabel</td>
             </tr>
             <tr>
-                <td>6</td>
+                <td></td>
                 <td>Kameela</td>
                 <td>#</td>
                 <td>Zuleyma El Charif</td>
             </tr>
             <tr>
-                <td>7</td>
+                <td></td>
                 <td>Sofia</td>
                 <td>#</td>
                 <td>Jen</td>
             </tr>
             <tr>
-                <td>8</td>
+                <td></td>
                 <td>Bianca</td>
                 <td>#</td>
                 <td>Mr. &amp; Mrs.</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td></td>
                 <td>Nathalya</td>
                 <td>#</td>
                 <td>Mr. &amp; Mrs.</td>
             </tr>
             <tr>
-                <td>10</td>
+                <td></td>
                 <td>Gaby</td>
                 <td>#</td>
                 <td>Pilar</td>
             </tr>
             <tr>
-                <td>11</td>
+                <td></td>
                 <td>Aaliyah</td>
-                <td>#</td>
-                <td>Mr. &amp; Mrs.</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td></td>
-                <td>#</td>
-                <td>Mr. &amp; Mrs.</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td></td>
-                <td>#</td>
-                <td>Mr. &amp; Mrs.</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td></td>
-                <td>#</td>
-                <td>Mr. &amp; Mrs.</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td></td>
                 <td>#</td>
                 <td>Mr. &amp; Mrs.</td>
             </tr>
         </tbody>
     </table>
+
+    <!-- COACHING STAFF  -->
     <table class="info">
         <thead>
             <tr>
@@ -293,6 +272,8 @@ and also iPads specifically.
             </tr>
         </tbody>
     </table>
+
+    <!-- UNIFORM  -->
     <table class="info">
         <thead>
             <tr>
@@ -307,6 +288,32 @@ and also iPads specifically.
             </tr>
         </tbody>
     </table>
+
+    <script>
+        // Wait for the DOM content to be loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the first table on the page
+            var table = document.querySelector('tbody');
+
+            // Get all the table rows within the first table
+            var rows = table.querySelectorAll('tr');
+
+            // Loop through each row and set the sequential number
+            for (var i = 0; i < rows.length; i++) {
+                // Get the first cell in the current row
+                var cell = rows[i].querySelector('td:first-child');
+
+                // Create a span element for the number
+                var numberSpan = document.createElement('span');
+
+                // Set the sequential number as the span's text
+                numberSpan.textContent = i + 1;
+
+                // Append the span element to the cell
+                cell.appendChild(numberSpan);
+            }
+        });
+    </script>
 </body>
 
 </html>
