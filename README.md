@@ -1,6 +1,6 @@
 # Four Corners 2007 Girls - Red Team
 
-Welcome to the Four Corners 2007 team roster. This is a way for us to get to know our kids' names, numbers, and parent names.
+Welcome to the Four Corners 2007 girls red team roster. This is a way for us to get to know our kids' names, numbers, and parent names.
 
 # Code
 This is a typical data table. I used JavaScript to add sequential numbering in the first cell of each row in order to get the count of total players. 
